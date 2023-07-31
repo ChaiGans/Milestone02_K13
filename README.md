@@ -7,6 +7,8 @@ First, run the development server:
 ```bash
 cd src
 # then
+npm install react react-dom next
+# then
 npm run dev
 # or
 yarn dev

@@ -26,25 +26,36 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Dummy Account
+
+- Username: admin@gmail.com
+- Password: 1234
+
 ## Tech Stack
 
 Library:
+
 - React
 
 Framework:
+
 - Next js (App route)
 - Tailwind CSS
 
 Database:
+
 - Supabase (Postgresql)
 
 Auth:
+
 - NextAuth
 
 ORM:
+
 - Prisma
 
 UI Library:
+
 - Shadcn
 
 ## Learn More

@@ -18,6 +18,9 @@ cd Milestone-2-SPARTA/src
 npm install react react-dom next
 # then
 npm run dev
+
+# to update cloned repository
+git pull
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

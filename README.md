@@ -1,19 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Notes
+
+- [Link Figma](https://www.figma.com/file/N73Q2YRAxtM3JvWvQTmknY/MaT-Pages?type=design&node-id=0-1&mode=design&t=LgzyTCj4HICOGZlr-0)
+- [Next.js App Routing](https://nextjs.org/docs/app/building-your-application/routing)
+- [UI Library (Kalo mau pake, tergantung kebutuhan)](https://ui.shadcn.com/docs)
+
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-cd src
+git clone https://github.com/ChaiGans/Milestone-2-SPARTA.git
+# then
+cd Milestone-2-SPARTA/src
 # then
 npm install react react-dom next
 # then
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -21,6 +25,27 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Tech Stack
+
+Library:
+- React
+
+Framework:
+- Next js (App route)
+- Tailwind CSS
+
+Database:
+- Supabase (Postgresql)
+
+Auth:
+- NextAuth
+
+ORM:
+- Prisma
+
+UI Library:
+- Shadcn
 
 ## Learn More
 

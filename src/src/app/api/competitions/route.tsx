@@ -12,6 +12,7 @@ interface RequestBody {
 
 export async function POST(request: Request) {
   const body: RequestBody = await request.json()
+  console.log(body)
 
   const lomba = await prisma.lomba.create({
     data: {

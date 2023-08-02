@@ -22,8 +22,8 @@ export default function RootLayout({
       <body className={`${inter.className} pt-8 pb-24 px-4 md:px-32`}>
         <Providers>
           <Navbar />
-          <Login></Login>
-          {/* {children} */}
+          {/* <Login></Login> */}
+          {children}
         </Providers>
       </body>
     </html>

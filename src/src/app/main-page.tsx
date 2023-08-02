@@ -49,11 +49,11 @@ export const MainPage = () => {
 
   return (
     <div className="lg:flex lg:flex-row lg:h-[480px] lg:items-center xl:h-[700px]">
-      <section className="flex-1">
+      <section className="flex-auto">
         <h2 className="font-poppinsbold text-4xl sm:text-5xl xl:text-[90px] text-center lg:text-start">
           Wujudkan prestasimu
         </h2>
-        <p className="text-center mt-2 leading-7 font-latoregular text-md sm:text-lg  sm:py-10 lg:pr-6 lg:text-lg lg:py-5 xl:text-3xl xl:pr-[500px] lg:text-start">
+        <p className="text-center mt-2 leading-7 font-latoregular text-md sm:text-lg  sm:py-10 lg:pr-6 lg:text-lg lg:py-5 xl:text-3xl xl:pr-[200px] lg:text-start">
           Daftar langsung pelombaan yang kamu minati. Tingkatkan prestasi dan
           kembangkan bakatmu. Cari pelombaan yang kamu minati dengan klik di
           bawah ini.
@@ -65,7 +65,7 @@ export const MainPage = () => {
         </div>
       </section>
       <section className="lg:w-[50px]"></section>
-      <section className="flex flex-col flex-1 lg:px-0 justify-center xl:max-w-[900px] w-[87%] sm:w-[75%] md:w-[80%] mx-auto mt-10 py-4 px-4 lg:py-0 lg:mt-0 lg:items-center">
+      <section className="flex flex-col flex-auto shrink-0 lg:px-0 justify-center xl:max-w-[900px] w-[87%] sm:w-[75%] md:w-[80%] mx-auto mt-10 py-4 px-4 lg:py-0 lg:mt-0 lg:items-center">
         <h3 className="font-poppinslight lg:font-poppinssb text-md text-center sm:text-xl lg:text-2xl xl:text-3xl">
           New This Week
         </h3>

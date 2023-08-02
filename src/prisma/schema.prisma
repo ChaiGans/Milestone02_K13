@@ -11,9 +11,22 @@ datasource db {
 }
 
 model User {
-  id       String @id @default(uuid())
+  id       String  @id @default(uuid())
   name     String
-  email    String @unique
+  email    String  @unique
   password String
-  balance  Int    @default(0)
+  balance  Int     @default(0)
+  Lomba    Lomba[]
+}
+
+model Lomba {
+  id               String @id @default(uuid())
+  name             String
+  description      String
+  registrationDate String
+  price            Int
+  contact          String
+  poster           String
+  organizer        User   @relation(fields: [userId], references: [id])
+  userId           String
 }

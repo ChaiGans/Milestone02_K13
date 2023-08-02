@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Lomba" ALTER COLUMN "contact" SET DATA TYPE TEXT;

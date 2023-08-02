@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Navbar from "@/components/Navbar"
+import { MainPage } from "./main-page"
 import { Login } from "./login-page"
 import { Popular } from "./popular-page"
 

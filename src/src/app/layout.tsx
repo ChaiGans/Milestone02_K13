@@ -25,6 +25,8 @@ export default function RootLayout({
           <Navbar />
           <Popular></Popular>
           {/* {children} */}
+          {/* <Login></Login> */}
+          {children}
         </Providers>
       </body>
     </html>

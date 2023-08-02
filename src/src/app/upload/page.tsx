@@ -1,9 +1,11 @@
 "use client"
 
 import { useSession } from "next-auth/react"
-import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
 
 function Upload() {
+  const router = useRouter()
   const { data: session } = useSession()
   const [dataLomba, setDataLomba] = useState({
     name: "",
@@ -13,9 +15,9 @@ function Upload() {
     contact: "",
     poster: "",
   })
-  //   console.log(session?.user)
-  console.log(dataLomba)
-  const addCompetition = async () => {
+
+  const addCompetition = async (e: any) => {
+    e.preventDefault()
     await fetch("/api/competitions", {
       method: "POST",
       body: JSON.stringify({
@@ -28,9 +30,11 @@ function Upload() {
         userId: session?.user.id,
       }),
       headers: {
-        "accept": "application/json",
+        "Content-Type": "application/json",
       },
     })
+
+    router.push("/")
   }
 
   return (

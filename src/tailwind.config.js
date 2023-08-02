@@ -87,6 +87,10 @@ module.exports = {
         poppinslight: ["Poppins-Light", "sans-serif"],
         poppinsmedium: ["Poppins-Medium", "sans-serif"],
         poppinssb: ["Poppins-SemiBold", "sans-serif"],
+        latolight: ["Lato-Light", "sans-serif"],
+        latoregular: ["Lato-Regular", "sans-serif"],
+        latobold: ["Lato-Bold", "sans-serif"],
+        latoblack: ["Lato-Black", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

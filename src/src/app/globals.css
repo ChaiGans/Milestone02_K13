@@ -82,3 +82,164 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+	font-family: 'Anton-Regular';
+	src: url('../../public/fonts/Anton-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manrope-Light';
+	src: url('../../public/fonts/Manrope-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manrope-Medium';
+	src: url('../../public/fonts/Manrope-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manrope-Regular';
+	src: url('../../public/fonts/Manrope-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manrope-Bold';
+	src: url('../../public/fonts/Manrope-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manrope-ExtraBold';
+	src: url('../../public/fonts/Manrope-ExtraBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Manrope-SemiBold';
+	src: url('../../public/fonts/Manrope-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: url('../../public/fonts/Poppins-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins-Bold';
+	src: url('../../public/fonts/Poppins-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins-Light';
+	src: url('../../public/fonts/Poppins-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins-Medium';
+	src: url('../../public/fonts/Poppins-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins-SemiBold';
+	src: url('../../public/fonts/Poppins-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-SemiBold';
+	src: url('../../public/fonts/Rubik-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-Medium';
+	src: url('../../public/fonts/Rubik-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-Regular';
+	src: url('../../public/fonts/Rubik-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-Light';
+	src: url('../../public/fonts/Rubik-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-Bold';
+	src: url('../../public/fonts/Rubik-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-ExtraBold';
+	src: url('../../public/fonts/Rubik-ExtraBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Syne-ExtraBold';
+	src: url('../../public/fonts/Syne-ExtraBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Syne-Regular';
+	src: url('../../public/fonts/Syne-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Syne-SemiBold';
+	src: url('../../public/fonts/Syne-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Syne-Medium';
+	src: url('../../public/fonts/Syne-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Syne-Bold';
+	src: url('../../public/fonts/Syne-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

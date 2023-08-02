@@ -15,6 +15,12 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -56,6 +62,32 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        anton: ["Anton-Regular", "sans-serif"],
+        manropelight: ["Manrope-Light", "sans-serif"],
+        manropemed: ["Manrope-Medium", "sans-serif"],
+        manropereg: ["Manrope-Regular", "sans-serif"],
+        manropebold: ["Manrope-Bold", "sans-serif"],
+        manropexb: ["Manrope-ExtraBold", "sans-serif"],
+        manropsb: ["Manrope-SemiBold", "sans-serif"],
+        poppins: ["Poppins-Regular", "sans-serif"],
+        syne: ["Syne-ExtraBold", "sans-serif"],
+        synereg: ["Syne-Regular", "sans-serif"],
+        synesb: ["Syne-SemiBold", "sans-serif"],
+        synemed: ["Syne-Medium", "sans-serif"],
+        synebold: ["Syne-Bold", "sans-serif"],
+        synexb: ["Syne-ExtraBold", "sans-serif"],
+        rubikbold: ["Rubik-Bold", "sans-serif"],
+        rubiksb: ["Rubik-SemiBold", "sans-serif"],
+        rubikmed: ["Rubik-Medium", "sans-serif"],
+        rubikreg: ["Rubik-Regular", "sans-serif"],
+        rubiklight: ["Rubik-Light", "sans-serif"],
+        rubikxb: ["Rubik-ExtraBold", "sans-serif"],
+        poppinsbold: ["Poppins-Bold", "sans-serif"],
+        poppinslight: ["Poppins-Light", "sans-serif"],
+        poppinsmedium: ["Poppins-Medium", "sans-serif"],
+        poppinssb: ["Poppins-SemiBold", "sans-serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -73,4 +105,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

@@ -20,7 +20,7 @@ function SigninButton() {
           </li>
           <li>
             <Link href="#" className="w-8 h-8">
-              <CgProfile size={32} />
+              <CgProfile size={38} />
             </Link>
           </li>
         </ul>

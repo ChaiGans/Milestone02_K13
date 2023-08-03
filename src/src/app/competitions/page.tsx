@@ -20,7 +20,7 @@ const Popular = () => {
       name: "Lomba Poster Ilmiah Nasional",
       description:
         "Lomba Poster Ilmiah Nasional adalah kompetisi yang diadakan di tingkat nasional di suatu negara, di mana peserta diminta untuk membuat poster ilmiah yang mencerminkan penelitian atau kajian dalam bidang ilmu tertentu. Lomba ini bertujuan untuk mendorong kreativitas dan kemampuan peserta dalam menyajikan hasil penelitian atau ide-ide ilmiah secara visual dan menarik.",
-      registrationDate: "24 April 2023",
+      registrationDate: "24 Apr",
       price: 0,
       contact: "085339061487",
       poster:
@@ -32,7 +32,7 @@ const Popular = () => {
       name: "Lomba Menulis Deskripsi Paten",
       description:
         "Lomba Menulis Deskripsi Paten adalah sebuah kompetisi di mana peserta ditantang untuk menyusun deskripsi lengkap dan terperinci mengenai suatu penemuan atau inovasi tertentu yang memiliki nilai komersial dan kebaruan. Lomba ini bertujuan untuk mendorong kreativitas dan kemampuan peserta dalam merumuskan deskripsi paten yang jelas, akurat, dan sesuai dengan aturan dan persyaratan yang berlaku dalam sistem paten.",
-      registrationDate: "30 Juli 2022",
+      registrationDate: "30 July",
       price: 50000,
       contact: "085172421910",
       poster:
@@ -44,7 +44,7 @@ const Popular = () => {
       name: "Lomba Jurnalistik",
       description:
         "Lomba Jurnalistik adalah sebuah kompetisi yang mengundang peserta untuk menguji kemampuan mereka dalam menulis dan menyajikan berita secara objektif, informatif, dan menarik. Lomba ini bertujuan untuk mendorong kreativitas dan profesionalisme dalam bidang jurnalisme, serta mempromosikan keterampilan penulisan yang baik dan pemahaman tentang etika jurnalistik.",
-      registrationDate: "1 Desember 2022",
+      registrationDate: "1 Des",
       price: 35000,
       contact: "08157618448",
       poster:
@@ -56,7 +56,7 @@ const Popular = () => {
       name: "Lomba Cipta Lagu Anak",
       description:
         "Lomba Cipta Lagu Anak adalah sebuah kompetisi kreatif di mana peserta diajak untuk menciptakan lagu yang ditujukan khusus untuk anak-anak. Lomba ini bertujuan untuk mendorong kreativitas peserta dalam menyusun lirik dan melodi lagu yang menarik, edukatif, dan menghibur bagi anak-anak.",
-      registrationDate: "15 September 2021",
+      registrationDate: "15 Sept",
       price: 0,
       contact: "081933803658",
       poster:
@@ -68,7 +68,7 @@ const Popular = () => {
       name: "Lomba Menyanyi Anak",
       description:
         "Lomba Menyanyi Anak adalah sebuah kompetisi yang mengajak anak-anak untuk menampilkan bakat menyanyi mereka di depan publik atau dewan juri. Lomba ini bertujuan untuk memberikan kesempatan kepada anak-anak untuk mengekspresikan diri melalui seni musik, mengasah kemampuan vokal, dan mengembangkan rasa percaya diri di atas panggung.",
-      registrationDate: "28 Oktober 2022",
+      registrationDate: "28 Okt",
       price: 0,
       contact: "08111888932",
       poster:
@@ -85,7 +85,7 @@ const Popular = () => {
 
   return (
     <div>
-      <div className="Sorting-Filtering flex justify-start gap-20 mb-10">
+      <div className="Sorting-Filtering flex justify-start gap-[40px] mb-10">
         <div className="Sorting font-medium">
           Sorted By <br />{" "}
           <span className="font-bold text-[26px]">Paling Populer</span>
@@ -94,33 +94,33 @@ const Popular = () => {
           Filtered By <br /> <span className="font-bold text-[26px]">None</span>
         </div>
       </div>
-      <div className="Card-List flex justify-start gap-[20px]">
+      <div className="Card-List flex justify-start gap-[40px] flex flex-wrap md:gap-[20px]">
         {lomba.map((competition: Lomba) => (
           <div
             key={competition.name}
-            className="card-display w-[200px] h-[420px] bg-transparent rounded-[20px] relative "
+            className="card-display w-[250px] h-[420px] bg-transparent rounded-[20px] relative mb-[40px] mx-[auto] sm:mx-[0] ml:mx-[0]"
           >
-            <div className="date text-[18px] bg-yellow-500 absolute p-[8px] w-[60px] h-[80px] left-[110px] z-50 overflow-wrap white-space: pre-line;">
+            <div className="date text-[18px] bg-yellow-500 absolute p-[8px] w-[60px] h-[80px] left-[180px] z-50 overflow-wrap white-space: pre-line;">
               <p className="font-bold">{competition.registrationDate}</p>
             </div>
             <div
               className="card-image rounded-tl-[20px] rounded-tr-[20px] h-[280px] bg-cover bg-center overflow-hidden relative mt-[20px]"
               style={{ backgroundImage: `url(${competition.poster})` }}
             >
-              <div className=" flex justify-center price rounded-tl-[10px] bg-yellow-500 relative w-[100px] h-[30px] top-[90%] left-[47%] items-center text-[12px]">
+              <div className=" price flex justify-center rounded-tl-[10px] bg-yellow-500 relative w-[150px] h-[30px] top-[90%] left-[47%] items-center text-[16px]">
                 Rp.{competition.price}
               </div>
             </div>
             <div className="card-description text-black text-center rounded-bl-[20px] rounded-br-[20px] bg-white py-[10px] overflow-hidden h-[140px] relative">
-              <h1 className="text-[14px] h-[50px] font-bold item-center justify-center">
+              <h1 className="text-[17px] h-[50px] font-bold item-center justify-center">
                 {competition.name}
               </h1>
-              <p className="text-[14px] font-medium m-auto">
+              <p className="text-[16px] font-medium m-auto">
                 Contact: {competition.contact}
               </p>
               <Link
                 href="#"
-                className="hover:bg-[#ccff33] active:bg-[#70e000] inline-block bg-[#9ef01a] px-[30px] py-[5px] mt-2 rounded-[10px] text-white absolute bottom-[10%] right-[20%]"
+                className="hover:bg-[#ccff33] active:bg-[#70e000] inline-block bg-[#9ef01a] px-[30px] py-[5px] mt-2 rounded-[10px] text-white absolute bottom-[10%] right-[75px]"
               >
                 Daftar
               </Link>

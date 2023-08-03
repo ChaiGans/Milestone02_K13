@@ -244,6 +244,10 @@
 	font-style: normal;
 }
 
-h1{
+h1 {
 	font-size: 32px;
+}
+
+h3 {
+	font-size: 24px;
 }

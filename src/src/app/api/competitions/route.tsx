@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       registrationDate: body.registrationDate,
       price: body.price,
       contact: body.contact,
-      poster: convertGoogleDriveURL(body.poster),
+      poster: body.poster,
       userId: body.userId,
     },
   })
@@ -33,16 +33,4 @@ export async function GET(request: Request) {
   const lomba = await prisma.lomba.findMany()
 
   return new Response(JSON.stringify(lomba))
-}
-
-function convertGoogleDriveURL(url: string): string {
-  const regex = /\/file\/d\/([^/]+)\/view/
-  const match = url.match(regex)
-
-  // if (!match || match.length < 2) {
-  //   throw new Error("Invalid Google Drive sharing URL")
-  // }
-
-  const fileId = match![1]
-  return `https://drive.google.com/uc?export=view&id=${fileId}`
 }

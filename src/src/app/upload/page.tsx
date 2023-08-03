@@ -4,6 +4,9 @@ import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
+import { UploadDropzone } from "@/utils/uploadthing"
+import "@uploadthing/react/styles.css"
+
 function Upload() {
   const router = useRouter()
   const { data: session } = useSession()
@@ -117,18 +120,26 @@ function Upload() {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="Link Poster">Link Poster</label>
-          <input
-            required
-            type="text"
-            className="border-primary-foreground border-2 h-10"
-            onChange={(e) =>
-              setDataLomba((prevData) => ({
-                ...prevData,
-                ...{ poster: e.target.value },
-              }))
-            }
+          <label htmlFor="Link Poster">Poster</label>
+          <UploadDropzone
+            endpoint="imageUploader"
+            onClientUploadComplete={(res) => {
+              // Do something with the response
+              if (res) {
+                setDataLomba((prevData) => ({
+                  ...prevData,
+                  ...{ poster: res[0].fileUrl },
+                }))
+              }
+              // console.log("Files: ", res)
+              // alert("Upload Completed")
+            }}
+            onUploadError={(error: Error) => {
+              // Do something with the error.
+              alert(`ERROR! ${error.message}`)
+            }}
           />
+          {dataLomba.poster === "" ? "" : <p>Uploaded</p>}
         </div>
         <button
           type="submit"

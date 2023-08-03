@@ -1,7 +1,3 @@
-import SigninButton from "./SigninButton";
-import Link from "next/link";
-
-
 interface CardLomba {
     image: string;
     coordinator: string;

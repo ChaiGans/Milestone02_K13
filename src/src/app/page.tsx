@@ -2,6 +2,8 @@
 import React, { useState } from "react"
 import { MdArrowBack, MdArrowForward } from "react-icons/md"
 import { PiDotOutlineDuotone } from "react-icons/pi"
+import Image from "next/image"
+import Link from "next/link"
 
 const MainPage = () => {
   const pictureData = [
@@ -59,9 +61,9 @@ const MainPage = () => {
           bawah ini.
         </p>
         <div className="flex justify-center items-center mt-5 lg:justify-start">
-          <button className="px-14 py-4 text-sm sm:text-lg sm:py-5 sm:px-24 lg:text-sm bg-yellow-400 text-black rounded-xl font-latobold font-bold hover:bg-yellow-600 hover:cursor-pointer xl:text-2xl xl:px-[140px] xl:mt-10 xl:ml-24">
+          <Link href="/competitions" className="px-14 py-4 text-sm sm:text-lg sm:py-5 sm:px-24 lg:text-sm bg-yellow-400 text-black rounded-xl font-latobold font-bold hover:bg-yellow-600 hover:cursor-pointer xl:text-2xl xl:px-[140px] xl:mt-10 xl:ml-24">
             Mari Berprestasi
-          </button>
+          </Link>
         </div>
       </section>
       <section className="lg:w-[50px]"></section>
@@ -76,8 +78,10 @@ const MainPage = () => {
           >
             <MdArrowBack className="fill-black w-8 h-8 sm:h-10 sm:w-10 xl:w-16 xl:h-16" />
           </button>
-          <img
+          <Image
             src={pictureData[currentIndex].image}
+            width={0}
+            height={0}
             alt="poster"
             className="mt-2 w-full lg:w-[80%] xl:w-[500px] h-full rounded-3xl lg:px-3 xl:px-5 xl:object-fit xl:object-center"
           />

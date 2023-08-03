@@ -27,7 +27,7 @@ function SigninButton() {
         </li>
         <li>
           <Link
-            href="#"
+            href="/signup"
             className="hover:opacity-90 bg-primary text-primary-foreground px-8 py-3 rounded-lg"
           >
             Signup

@@ -1,9 +1,7 @@
-"use client";
-import React, { useState } from "react";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
-import { PiDotOutlineDuotone } from "react-icons/pi";
+"use client"
+import React, { useState } from "react"
 
-export const Login = () => {
+const Login = () => {
   return (
     <div className="bg-[url('/assets/backgroundLogin.svg')] bg-no-repeat bg-cover bg-center fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center">
       <div className="bg-[rgba(0,0,0,0.8)] w-full relative top-0 right-0 left-0 bottom-0 min-h-screen flex justify-center items-center"></div>
@@ -51,5 +49,7 @@ export const Login = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
+
+export default Login

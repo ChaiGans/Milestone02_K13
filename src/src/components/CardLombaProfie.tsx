@@ -1,9 +1,9 @@
 interface CardLomba {
-    image: string;
-    coordinator: string;
-    category: string;
-    timeleft: string;
-    status: string;
+  image: string;
+  coordinator: string;
+  category: string;
+  timeleft: string;
+  status: string;
 }
 
 export default function CardLombaProfile({image, coordinator, category, timeleft, status} : CardLomba) {

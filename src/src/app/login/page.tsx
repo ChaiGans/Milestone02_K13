@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import { signIn } from "next-auth/react"
+import Link from "next/link";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
@@ -56,9 +57,13 @@ const Login = () => {
                 }
               />
               <p className="font-latobold text-black text-end text-[9px] font-normal mt-2 xl:text-lg">
-                <a href="/" target="_blank" className="hover:text-blue-700">
+                <Link
+                  href="/signup"
+                  target="_blank"
+                  className="hover:text-blue-700"
+                >
                   Lupa password?
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -66,7 +71,7 @@ const Login = () => {
             <div className="flex justify-center items-center">
               <button
                 type="submit"
-                className="font-latoregular font-normal bg-yellow-400 px-16 py-2 rounded-lg text-black text-xs mb-2 hover:cursor-pointer hover:bg-yellow-500 xl:text-xl xl:px-36 xl:py-5 xl:rounded-2xl shadow-md shadow-gray-400 xl:mb-10 xl:font-medium"
+                className="font-latoregular font-normal bg-yellow-400 px-16 py-2 rounded-lg text-black text-xs mb-2 hover:cursor-pointer hover:bg-yellow-500 xl:text-xl xl:px-36 xl:py-5 xl:rounded-2xl xl:mt-10 shadow-md shadow-gray-400 xl:mb-10 xl:font-medium"
               >
                 Login
               </button>
@@ -74,7 +79,7 @@ const Login = () => {
             <p className="font-latoregular text-black text-[8px] text-center xl:text-lg">
               Belum punya akun?
               <span className="font-bold hover:text-blue-700 ml-1">
-                <a href="/" target="_blank">
+                <a href="/signup">
                   Daftar di sini
                 </a>
               </span>
@@ -83,7 +88,7 @@ const Login = () => {
         </form>
       </div>
     </div>
-  )
+  );
 }
 
 export default Login

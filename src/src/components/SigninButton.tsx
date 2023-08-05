@@ -29,16 +29,21 @@ function SigninButton() {
               <PopoverTrigger>
                 <CgProfile size={38} />
               </PopoverTrigger>
-              <PopoverContent className="w-28">
-                <div className="text-center">
+              <PopoverContent className="w-32">
+                <div className="text-center flex flex-col">
                   <Link
                     href={`/profile/${session.user.id}`}
-                    className="w-8 h-8"
+                    className="hover:bg-background hover:text-foreground p-2"
                   >
                     Profile
                   </Link>
                   <hr />
-                  <button onClick={() => signOut()}>Sign Out</button>
+                  <button
+                    onClick={() => signOut()}
+                    className="hover:bg-background hover:text-foreground p-2"
+                  >
+                    Sign Out
+                  </button>
                 </div>
               </PopoverContent>
             </Popover>

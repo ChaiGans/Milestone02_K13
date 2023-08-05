@@ -76,13 +76,15 @@ const MainPage = () => {
           >
             <MdArrowBack className="fill-black w-8 h-8 sm:h-10 sm:w-10 xl:w-16 xl:h-16" />
           </button>
-          <Image
-            src={lomba[currentIndex]?.poster}
-            width={300}
-            height={400}
-            alt="poster"
-            className="mt-2 w-[70%] lg:w-[60%] xl:w-[400px] h-full rounded-3xl xl:object-fit xl:object-center"
-          />
+          <Link href={`/competitions/${lomba[currentIndex]?.id}`}>
+            <Image
+              src={lomba[currentIndex]?.poster}
+              width={400}
+              height={0}
+              alt="poster"
+              className="object-cover max-h-[500px]"
+            />
+          </Link>
           <button
             onClick={handleForwardClick}
             className="bg-yellow-400 ml-2 rounded-full w-7 h-7 sm:w-10 sm:h-10 xl:w-14 xl:h-14 py-2 hover:cursor-pointer hover:bg-yellow-500 shadow-md shadow-black flex items-center justify-center"

@@ -23,7 +23,7 @@ const MainPage = () => {
       .then((response) => response.json())
       .then((data) => setLomba(data))
   }, [])
-  console.log(lomba)
+  // console.log(lomba)
 
   const [currentIndex, setCurrentIndex] = useState(0)
 

@@ -35,7 +35,7 @@ function Competition({ params }: { params: { slug: string } }) {
   useEffect(() => {
     fetch(`/api/user/${lomba?.userId}`)
       .then((response) => response.json())
-      .then((data) => setOrganizer(data))
+      .then((data) => setOrganizer(data?.name))
   }, [lomba])
   // console.log(organizer)
 

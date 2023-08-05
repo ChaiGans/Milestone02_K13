@@ -2,9 +2,11 @@
 import { useState } from "react"
 import CardLombaProfile from "@/components/CardLombaProfie"
 import { useSession } from "next-auth/react"
+import Image from "next/image"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CgProfile } from "react-icons/cg"
+import Link from "next/link"
 
 function Profile() {
   const { data: session } = useSession()
@@ -37,6 +39,9 @@ function Profile() {
             alt="Profile"
             className="rounded-full h-[100px] w-[100px] object-cover object-center mb-3"
           /> */}
+          <Link href={`/edit-profile/${session.user.id}`} className="self-end">
+            <Image alt="edit" src="/assets/edit 1.svg" width={32} height={32} />
+          </Link>
           <CgProfile size={128} className="text-primary-foreground" />
           <div className="flex flex-col items-center justify-center">
             <p className="text-black font-poppinsbold text-lg">

@@ -9,6 +9,7 @@ import isEmpty from "lodash.isempty"
 import { CgProfile } from "react-icons/cg"
 
 interface Lomba {
+  id: string
   name: string
   description: string
   registrationDate: string
@@ -30,13 +31,13 @@ function Competition({ params }: { params: { slug: string } }) {
       )
   }, [])
 
-  console.log(lomba)
+  // console.log(lomba)
   useEffect(() => {
     fetch(`/api/user/${lomba?.userId}`)
       .then((response) => response.json())
       .then((data) => setOrganizer(data))
   }, [lomba])
-  console.log(organizer)
+  // console.log(organizer)
 
   if (!isEmpty(lomba)) {
     return (
@@ -57,7 +58,7 @@ function Competition({ params }: { params: { slug: string } }) {
             <p>Biaya Pendaftaran: {lomba.price}</p>
             <p>Contact Person: {lomba.contact}</p>
             <Link
-              href="#"
+              href={`/checkout/${lomba.id}`}
               className="bg-primary text-primary-foreground px-12 py-3 self-baseline rounded-lg"
             >
               Daftar

@@ -1,42 +1,42 @@
-"use client";
-import React, { useState } from "react";
+"use client"
+import React, { useState } from "react"
 
 export const Editprofile = () => {
-  const [nama, setNama] = useState("");
-  const [email, setEmail] = useState("");
-  const [instansi, setInstansi] = useState("");
-  const [lomba1, setLomba1] = useState("");
-  const [lomba2, setLomba2] = useState("");
-  const [lomba3, setLomba3] = useState("");
+  const [nama, setNama] = useState("")
+  const [email, setEmail] = useState("")
+  const [instansi, setInstansi] = useState("")
+  const [lomba1, setLomba1] = useState("")
+  const [lomba2, setLomba2] = useState("")
+  const [lomba3, setLomba3] = useState("")
 
-  const handleNamaChange = (e) => {
-    setNama(e.target.value);
-  };
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleInstansiChange = (e) => {
-    setInstansi(e.target.value);
-  };
-  const handleLomba1Change = (e) => {
-    setLomba1(e.target.value);
-  };
-  const handleLomba2Change = (e) => {
-    setLomba2(e.target.value);
-  };
-  const handleLomba3Change = (e) => {
-    setLomba3(e.target.value);
-  };
+  const handleNamaChange = (e: any) => {
+    setNama(e.target.value)
+  }
+  const handleEmailChange = (e: any) => {
+    setEmail(e.target.value)
+  }
+  const handleInstansiChange = (e: any) => {
+    setInstansi(e.target.value)
+  }
+  const handleLomba1Change = (e: any) => {
+    setLomba1(e.target.value)
+  }
+  const handleLomba2Change = (e: any) => {
+    setLomba2(e.target.value)
+  }
+  const handleLomba3Change = (e: any) => {
+    setLomba3(e.target.value)
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Nama:", nama);
-    console.log("Email:", email);
-    console.log("Asal Instansi:", instansi);
-    console.log("Lomba 1:", lomba1);
-    console.log("Lomba 2:", lomba2);
-    console.log("Lomba 3:", lomba3);
-  };
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    console.log("Nama:", nama)
+    console.log("Email:", email)
+    console.log("Asal Instansi:", instansi)
+    console.log("Lomba 1:", lomba1)
+    console.log("Lomba 2:", lomba2)
+    console.log("Lomba 3:", lomba3)
+  }
 
   return (
     <div className="container mx-auto p-4 max-w-4xl rounded-lg bg-white min-h-fit text-black ">
@@ -134,5 +134,5 @@ export const Editprofile = () => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}

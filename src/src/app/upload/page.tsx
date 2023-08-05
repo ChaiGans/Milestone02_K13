@@ -53,6 +53,7 @@ function Upload() {
           <label htmlFor="Nama Lomba">Nama Lomba</label>
           <input
             required
+            placeholder="Nama Lomba"
             type="text"
             className="border-primary-foreground border-2 h-10"
             onChange={(e) =>
@@ -67,6 +68,7 @@ function Upload() {
           <label htmlFor="Deskripsi Lomba">Deskripsi Lomba</label>
           <input
             required
+            placeholder="Deskripsi Lomba"
             type="text"
             className="border-primary-foreground border-2 h-10"
             onChange={(e) =>
@@ -81,6 +83,7 @@ function Upload() {
           <label htmlFor="Deadline Pendaftaran">Deadline Pendaftaran</label>
           <input
             required
+            placeholder="05 November 2023"
             type="text"
             className="border-primary-foreground border-2 h-10"
             onChange={(e) =>
@@ -95,6 +98,7 @@ function Upload() {
           <label htmlFor="Biaya Pendaftaran">Biaya Pendaftaran</label>
           <input
             required
+            placeholder="50000"
             type="text"
             className="border-primary-foreground border-2 h-10"
             onChange={(e) =>
@@ -109,6 +113,7 @@ function Upload() {
           <label htmlFor="Kontak Penyelenggara">Kontak Penyelenggara</label>
           <input
             required
+            placeholder="6281212345678"
             type="text"
             className="border-primary-foreground border-2 h-10"
             onChange={(e) =>

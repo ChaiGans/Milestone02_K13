@@ -8,6 +8,7 @@ interface RequestBody {
   contact: string
   poster: string
   userId: string
+  category: string
 }
 
 export async function POST(request: Request) {
@@ -17,6 +18,7 @@ export async function POST(request: Request) {
   const lomba = await prisma.lomba.create({
     data: {
       name: body.name,
+      category: body.category,
       description: body.description,
       registrationDate: body.registrationDate,
       price: body.price,

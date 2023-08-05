@@ -1,5 +1,11 @@
 "use client"
 
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+
 import { CgProfile } from "react-icons/cg"
 import { signIn, signOut, useSession } from "next-auth/react"
 import Link from "next/link"
@@ -19,9 +25,23 @@ function SigninButton() {
             </Link>
           </li>
           <li>
-            <Link href="#" className="w-8 h-8">
-              <CgProfile size={38} />
-            </Link>
+            <Popover>
+              <PopoverTrigger>
+                <CgProfile size={38} />
+              </PopoverTrigger>
+              <PopoverContent className="w-28">
+                <div className="text-center">
+                  <Link
+                    href={`/profile/${session.user.id}`}
+                    className="w-8 h-8"
+                  >
+                    Profile
+                  </Link>
+                  <hr />
+                  <button onClick={() => signOut()}>Sign Out</button>
+                </div>
+              </PopoverContent>
+            </Popover>
           </li>
         </ul>
       </div>

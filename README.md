@@ -48,6 +48,7 @@ Framework:
 Database:
 
 - Supabase (Postgresql)
+- uploadthing (File Uploads)
 
 Auth:
 

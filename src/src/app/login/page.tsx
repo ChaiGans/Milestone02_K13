@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import { signIn } from "next-auth/react"
-import Link from "next/link";
+import Link from "next/link"
 
 const Login = () => {
   const [loginData, setLoginData] = useState({
@@ -56,15 +56,7 @@ const Login = () => {
                   }))
                 }
               />
-              <p className="font-latobold text-black text-end text-[9px] font-normal mt-2 xl:text-lg">
-                <Link
-                  href="/signup"
-                  target="_blank"
-                  className="hover:text-blue-700"
-                >
-                  Lupa password?
-                </Link>
-              </p>
+              <p className="font-latobold text-black text-end text-[9px] font-normal mt-2 xl:text-lg"></p>
             </div>
           </div>
           <div>
@@ -79,16 +71,14 @@ const Login = () => {
             <p className="font-latoregular text-black text-[8px] text-center xl:text-lg">
               Belum punya akun?
               <span className="font-bold hover:text-blue-700 ml-1">
-                <a href="/signup">
-                  Daftar di sini
-                </a>
+                <Link href="/signup">Daftar di sini</Link>
               </span>
             </p>
           </div>
         </form>
       </div>
     </div>
-  );
+  )
 }
 
 export default Login

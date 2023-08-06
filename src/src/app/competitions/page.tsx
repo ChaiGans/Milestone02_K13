@@ -50,10 +50,13 @@ const Popular = () => {
               style={{ backgroundImage: `url(${competition.poster})` }}
             >
               <div className=" price flex justify-center rounded-tl-[10px] bg-primary relative w-[150px] h-[30px] top-[90%] left-[47%] items-center text-[16px]">
-                Rp.{competition.price}
+                {new Intl.NumberFormat("id-ID", {
+                  style: "currency",
+                  currency: "IDR",
+                }).format(competition.price)}
               </div>
             </div>
-            <div className="card-description text-black text-center rounded-bl-[20px] rounded-br-[20px] bg-white py-[10px] overflow-hidden h-[140px] relative">
+            <div className="card-description text-primary-foreground text-center rounded-bl-[20px] rounded-br-[20px] bg-foreground py-[10px] overflow-hidden h-[140px] relative">
               <h1 className="text-[17px] h-[50px] font-bold item-center justify-center">
                 {competition.name}
               </h1>
@@ -62,7 +65,7 @@ const Popular = () => {
               </p>
               <Link
                 href={`/competitions/${competition.id}`}
-                className="hover:bg-[#ccff33] active:bg-[#70e000] inline-block bg-[#9ef01a] px-[30px] py-[5px] mt-2 rounded-[10px] text-white absolute bottom-[10%] right-[75px]"
+                className="hover:bg-[#ccff33] active:bg-[#70e000] inline-block bg-[#9ef01a] px-[30px] py-[5px] mt-2 rounded-[10px] text-primary-foreground absolute bottom-[10%] right-[75px]"
               >
                 Daftar
               </Link>

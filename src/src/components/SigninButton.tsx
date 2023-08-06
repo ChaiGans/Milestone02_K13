@@ -19,14 +19,14 @@ function SigninButton() {
           <li>
             <Link
               href="/upload"
-              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg"
+              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-yellow-600 hover:cursor-pointer"
             >
               Upload
             </Link>
           </li>
           <li>
             <Popover>
-              <PopoverTrigger>
+              <PopoverTrigger className="hover:text-slate-300">
                 <CgProfile size={38} />
               </PopoverTrigger>
               <PopoverContent className="w-32">

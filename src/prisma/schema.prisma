@@ -18,7 +18,7 @@ model User {
   balance  Int       @default(0)
   password String
   instance String?
-  fave     String[]
+  fave     String[]  @default(["Seni", "Olahraga", "Akademik"])
   Lomba    Lomba[]
   Compete  Compete[]
 }

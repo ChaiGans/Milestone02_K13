@@ -48,32 +48,52 @@ const Checkout = ({ params }: { params: { id: string } }) => {
     return (
       <div>
         <h1 className="mb-8">Checkout</h1>
-        <div className="flex justify-between">
-          <main className="flex bg-foreground text-primary-foreground p-8 gap-16 rounded-xl">
+        <div className="flex flex-col xl:flex-row justify-between gap-12">
+          <main className="flex flex-col items-center lg:items-start text-center lg:flex-row lg:justify-between bg-foreground text-primary-foreground p-8 gap-16 rounded-xl">
             <Image alt={lomba.name} src={lomba.poster} width={200} height={0} />
             <h2 className="max-w-sm">{lomba.name}</h2>
-            <h3 className="self-end">{lomba.price}</h3>
+            <h3 className="lg:self-end">
+              {new Intl.NumberFormat("id-ID", {
+                style: "currency",
+                currency: "IDR",
+              }).format(lomba.price)}
+            </h3>
           </main>
           <section className="flex flex-col bg-foreground text-primary-foreground p-8 gap-8 rounded-xl">
             <h2>Summary</h2>
             <div className="flex flex-col gap-4">
-              <div className="flex justify-between gap-48">
+              <div className="flex justify-between gap-12 sm:gap-48">
                 <p>Biaya Perlombaan</p>
-                <p>{lomba.price}</p>
+                <p>
+                  {new Intl.NumberFormat("id-ID", {
+                    style: "currency",
+                    currency: "IDR",
+                  }).format(lomba.price)}
+                </p>
               </div>
               <div className="flex justify-between">
                 <p>Platform Fee</p>
-                <p>{Math.round(lomba.price * 0.1)}</p>
+                <p>
+                  {new Intl.NumberFormat("id-ID", {
+                    style: "currency",
+                    currency: "IDR",
+                  }).format(Math.round(lomba.price * 0.1))}
+                </p>
               </div>
               <hr />
               <div className="flex justify-between">
                 <p>Total</p>
-                <p>{Math.round(lomba.price * 1.1)}</p>
+                <p>
+                  {new Intl.NumberFormat("id-ID", {
+                    style: "currency",
+                    currency: "IDR",
+                  }).format(Math.round(lomba.price * 1.1))}
+                </p>
               </div>
             </div>
             <button
               onClick={handleCheckout}
-              className="bg-primary self-center px-8 py-3 rounded-xl"
+              className="bg-primary hover:bg-yellow-600 self-center px-8 py-3 rounded-xl mt-4"
             >
               Checkout
             </button>

@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+
 import { useRouter } from "next/navigation"
 
 interface profileData {
@@ -56,9 +57,9 @@ const Editprofile = () => {
 
   if (session && session.user && dataProfile) {
     return (
-      <div className="container mx-auto p-4 max-w-4xl rounded-lg bg-white min-h-fit text-black ">
-        <div className="container mx auto p-0 my-5 text-center">
-          <h1 className="text-left font-poppinsbold text-4xl sm:text-5xl xl:text-[50px] ml-6 ">
+      <div className="container mx-auto p-2 sm:p-4 max-w-4xl rounded-lg bg-white min-h-fit text-black ">
+        <div className="container p-0 my-5 text-center">
+          <h1 className="text-center sm:text-left font-poppinsbold text-4xl sm:text-5xl xl:text-[50px] ml-6 ">
             Detail Profil
           </h1>
         </div>
@@ -68,7 +69,7 @@ const Editprofile = () => {
           <CgProfile size={150} className="text-primary-foreground mb-8" />
         </div>
         <form onSubmit={handleSubmit} method="patch">
-          <div className="grid grid-rows-3 grid-flow-col grid-cols-2 gap-4 px-10">
+          <div className="grid grid-rows-3 grid-flow-col grid-cols-2 gap-4 px-2 sm:px-10">
             <div>
               <label className="md:block">Nama</label>
               <input
@@ -115,6 +116,7 @@ const Editprofile = () => {
                 onValueChange={(value) =>
                   setDataProfile((prevData) => ({ ...prevData, lomba1: value }))
                 }
+                required
               >
                 <SelectTrigger className="border-2 border-zinc-500 w-full sm:w-full py-6 mt-2 rounded-lg">
                   <SelectValue
@@ -142,6 +144,7 @@ const Editprofile = () => {
                 onValueChange={(value) =>
                   setDataProfile((prevData) => ({ ...prevData, lomba2: value }))
                 }
+                required
               >
                 <SelectTrigger className="border-2 border-zinc-500 w-full sm:w-full py-6 mt-2 rounded-lg">
                   <SelectValue
@@ -169,6 +172,7 @@ const Editprofile = () => {
                 onValueChange={(value) =>
                   setDataProfile((prevData) => ({ ...prevData, lomba3: value }))
                 }
+                required
               >
                 <SelectTrigger className="border-2 border-zinc-500 w-full sm:w-full py-6 mt-2 rounded-lg">
                   <SelectValue
@@ -195,7 +199,7 @@ const Editprofile = () => {
           <div className="flex flex-col mt-20 mb-10">
             <button
               type="submit"
-              className="bg-amber-300 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-lg mx-auto px-20 py-4 font-poppinsbold  "
+              className="bg-primary hover:bg-yellow-600 focus:outline-none focus:ring rounded-lg mx-auto px-20 py-4 font-poppinsbold  "
             >
               Simpan
             </button>

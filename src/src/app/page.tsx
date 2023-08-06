@@ -21,7 +21,7 @@ const MainPage = () => {
   useEffect(() => {
     fetch("/api/competitions")
       .then((response) => response.json())
-      .then((data) => setLomba(data))
+      .then((data) => setLomba(data.slice(0, 5)))
   }, [])
   // console.log(lomba)
 
@@ -46,7 +46,7 @@ const MainPage = () => {
   }
 
   return (
-    <div className="lg:flex lg:flex-row h-auto lg:items-center  xl:min-w-screen overflow-hidden">
+    <div className="lg:flex lg:flex-row h-auto lg:items-center xl:min-w-screen overflow-hidden">
       <section className="flex-auto xl:w-[40%]">
         <h2 className="font-poppinsbold text-4xl sm:text-5xl xl:text-[90px] text-center lg:text-start">
           Wujudkan prestasimu
@@ -59,7 +59,7 @@ const MainPage = () => {
         <div className="flex justify-center items-center mt-5 lg:justify-start">
           <Link
             href="/competitions"
-            className="px-14 lg:px-10 py-4 text-sm sm:text-lg sm:py-5 sm:px-24 lg:text-sm bg-yellow-400 text-black rounded-xl font-latobold font-bold hover:bg-yellow-600 hover:cursor-pointer xl:text-2xl xl:px-[100px] xl:mt-10 xl:ml-20"
+            className="px-14 lg:px-10 py-4 text-sm sm:text-lg sm:py-5 sm:px-24 lg:text-sm bg-primary text-primary-foreground rounded-xl font-latobold font-bold hover:bg-yellow-600 hover:cursor-pointer xl:text-2xl xl:px-[100px] xl:mt-10 xl:ml-20"
           >
             Mari Berprestasi
           </Link>
@@ -72,9 +72,9 @@ const MainPage = () => {
         <div className="flex flex-row justify-center items-center">
           <button
             onClick={handleBackClick}
-            className="bg-yellow-400 mr-2 w-7 h-7 sm:w-10 sm:h-10 xl:w-14 xl:h-14 rounded-full py-2 hover:cursor-pointer hover:bg-yellow-500 shadow-md shadow-black flex items-center justify-center"
+            className="bg-primary mr-2 w-7 h-7 sm:w-10 sm:h-10 xl:w-14 xl:h-14 rounded-full py-2 hover:cursor-pointer hover:bg-yellow-500 shadow-md shadow-primary-foreground flex items-center justify-center"
           >
-            <MdArrowBack className="fill-black w-8 h-8 sm:h-10 sm:w-10 xl:w-16 xl:h-16" />
+            <MdArrowBack className="fill-primary-foreground w-8 h-8 sm:h-10 sm:w-10 xl:w-16 xl:h-16" />
           </button>
           <Link href={`/competitions/${lomba[currentIndex]?.id}`}>
             <Image
@@ -87,9 +87,9 @@ const MainPage = () => {
           </Link>
           <button
             onClick={handleForwardClick}
-            className="bg-yellow-400 ml-2 rounded-full w-7 h-7 sm:w-10 sm:h-10 xl:w-14 xl:h-14 py-2 hover:cursor-pointer hover:bg-yellow-500 shadow-md shadow-black flex items-center justify-center"
+            className="bg-primary ml-2 rounded-full w-7 h-7 sm:w-10 sm:h-10 xl:w-14 xl:h-14 py-2 hover:cursor-pointer hover:bg-yellow-500 shadow-md shadow-primary-foreground flex items-center justify-center"
           >
-            <MdArrowForward className="fill-black w-8 h-8 sm:h-10 sm:w-10 xl:w-16 xl:h-16 " />
+            <MdArrowForward className="fill-primary-foreground w-8 h-8 sm:h-10 sm:w-10 xl:w-16 xl:h-16 " />
           </button>
         </div>
         <div className="flex flex-row justify-center">
@@ -100,7 +100,7 @@ const MainPage = () => {
               className="text-2xl cursor-pointer"
             >
               {slideIndex !== currentIndex ? (
-                <PiDotOutlineDuotone className="fill-white w-5 h-5 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:h-20 xl:w-20" />
+                <PiDotOutlineDuotone className="fill-foreground w-5 h-5 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:h-20 xl:w-20" />
               ) : (
                 <PiDotOutlineDuotone className="fill-yellow-400 w-5 h-5 sm:w-8 sm:h-8 lg:w-12 lg:h-12 xl:h-20 xl:w-20" />
               )}

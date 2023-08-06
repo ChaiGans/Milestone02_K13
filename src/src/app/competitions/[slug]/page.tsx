@@ -43,37 +43,38 @@ function Competition({ params }: { params: { slug: string } }) {
     return (
       <div>
         <h1 className="mb-8">{lomba.name}</h1>
-        <div className="flex gap-48 mb-16">
-          <main>
-            <Image
-              alt={lomba.name}
-              src={lomba.poster}
-              width={400}
-              height={0}
-            ></Image>
+        <div className="flex flex-col xl:flex-row justify-between gap-12 mb-36 xl:mb-16">
+          <main className="self-center">
+            <Image alt={lomba.name} src={lomba.poster} width={400} height={0} />
           </main>
-          <section className="flex flex-col gap-4 max-w-3xl">
+          <section className="flex flex-col self-center gap-4 max-w-3xl">
             <p>{lomba.description}</p>
             <p>Deadline Pendaftaran: {lomba.registrationDate}</p>
-            <p>Biaya Pendaftaran: {lomba.price}</p>
+            <p>
+              Biaya Pendaftaran:{" "}
+              {new Intl.NumberFormat("id-ID", {
+                style: "currency",
+                currency: "IDR",
+              }).format(lomba.price)}
+            </p>
             <p>Contact Person: {lomba.contact}</p>
             <Link
               href={`/checkout/${lomba.id}`}
-              className="bg-primary text-primary-foreground px-12 py-3 self-baseline rounded-lg"
+              className="bg-primary hover:bg-yellow-600 text-primary-foreground px-12 py-3 self-center xl:self-baseline rounded-lg"
             >
               Daftar
             </Link>
           </section>
         </div>
-        <div className="flex gap-6">
-          <main>
+        <div className="flex flex-col text-center xl:text-start xl:flex-row gap-6">
+          <main className="self-center">
             <CgProfile size={128} />
           </main>
           <section className="flex flex-col self-center gap-4">
             <h3>{organizer}</h3>
             <a
               href={`https://wa.me/${lomba.contact}`}
-              className="bg-primary text-primary-foreground px-8 py-2 self-baseline rounded-lg"
+              className="bg-primary hover:bg-yellow-600 text-primary-foreground px-8 py-2 self-baseline rounded-lg"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -15,22 +15,22 @@ export default function CardLombaProfile({
   category,
 }: CardLomba) {
   return (
-    <div className="w-full bg-white rounded-lg flex flex-row px-5 py-4">
+    <div className="w-full bg-white rounded-lg flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-start px-5 py-4">
       <Image
         alt={coordinator}
         src={image}
         width={300}
         height={0}
         className="h-[240px] w-[180px] object-cover object-center"
-      ></Image>
+      />
       <div className="flex-1 px-2 py-3 flex flex-col justify-between">
         <div>
-          <p className="font-poppinsbold text-md text-black">{coordinator}</p>
-          <p className="font-poppinslight text-xs text-black">{category}</p>
+          <p className="font-poppinsbold text-lg text-black">{coordinator}</p>
+          <p className="font-poppinslight text-black">{category}</p>
         </div>
         <Link
           href={`/competitions/${id}`}
-          className="self-start bg-primary text-xs font-latoregular text-primary-foreground px-4 py-3 rounded-lg max-w-[400px] hover:bg-yellow-600"
+          className="self-center sm:self-start bg-primary font-latoregular text-primary-foreground px-4 py-3 rounded-lg max-w-[400px] hover:bg-yellow-600"
         >
           Lihat Detail
         </Link>

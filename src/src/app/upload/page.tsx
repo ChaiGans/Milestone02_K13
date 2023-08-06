@@ -7,11 +7,20 @@ import { useState } from "react"
 import { UploadDropzone } from "@/utils/uploadthing"
 import "@uploadthing/react/styles.css"
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+
 function Upload() {
   const router = useRouter()
   const { data: session } = useSession()
   const [dataLomba, setDataLomba] = useState({
     name: "",
+    category: "",
     description: "",
     registrationDate: "",
     price: 0,
@@ -25,6 +34,7 @@ function Upload() {
       method: "POST",
       body: JSON.stringify({
         name: dataLomba.name,
+        category: dataLomba.category,
         description: dataLomba.description,
         registrationDate: dataLomba.registrationDate,
         price: dataLomba.price,
@@ -63,6 +73,30 @@ function Upload() {
               }))
             }
           />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="Bidang Lomba">Bidang Lomba</label>
+          <Select
+            onValueChange={(value) =>
+              setDataLomba((prevData) => ({ ...prevData, category: value }))
+            }
+            required
+          >
+            <SelectTrigger className="border-primary-foreground border-2 h-10 rounded-none">
+              <SelectValue placeholder="Bidang Lomba" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="Seni">Seni</SelectItem>
+              <SelectItem value="Olahraga">Olahraga</SelectItem>
+              <SelectItem value="Akademik">Akademik</SelectItem>
+              <SelectItem value="Kewirausahaan">Kewirausahaan</SelectItem>
+              <SelectItem value="Fashion">Fashion</SelectItem>
+              <SelectItem value="Kuliner">Kuliner</SelectItem>
+              <SelectItem value="Teknologi">Teknologi</SelectItem>
+              <SelectItem value="Bahasa">Bahasa</SelectItem>
+              <SelectItem value="Multimedia">Multimedia</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
         <div className="flex flex-col">
           <label htmlFor="Deskripsi Lomba">Deskripsi Lomba</label>

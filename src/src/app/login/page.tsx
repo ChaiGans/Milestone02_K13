@@ -25,7 +25,7 @@ const Login = () => {
       <div className="bg-white rounded-lg xl:rounded-2xl w-[300px] h-[70%] md:w-[400px] xl:w-[30%] flex flex-col absolute py-10 px-10 md:py-16 md:px-16 justify-around">
         <form onSubmit={onLogin}>
           <div>
-            <p className="text-black font-poppinsmedium text-2xl text-center mt-7 mb-10 md:mt-0 xl:mb-16 xl:font-poppinssb xl:text-4xl">
+            <p className="text-primary-foreground font-poppinsmedium text-2xl text-center mt-7 mb-10 md:mt-0 xl:mb-16 xl:font-poppinssb xl:text-4xl">
               Login
             </p>
 
@@ -33,7 +33,7 @@ const Login = () => {
               <input
                 type="text"
                 placeholder="Username"
-                className="text-[13px] leading-6 xl:text-xl px-3 py-1 border-solid border-black border rounded-sm w-full text-black xl:h-[50px]"
+                className="text-[13px] leading-6 xl:text-xl px-3 py-1 border-solid border-primary-foreground border rounded-sm w-full text-primary-foreground xl:h-[50px]"
                 required
                 onChange={(e) =>
                   setLoginData((prevData) => ({
@@ -47,7 +47,7 @@ const Login = () => {
               <input
                 type="password"
                 placeholder="Password"
-                className="text-[13px] leading-6 xl:text-xl px-3 py-1 border-solid border-black border rounded-sm w-full text-black xl:h-[50px]"
+                className="text-[13px] leading-6 xl:text-xl px-3 py-1 border-solid border-primary-foreground border rounded-sm w-full text-primary-foreground xl:h-[50px]"
                 required
                 onChange={(e) =>
                   setLoginData((prevData) => ({
@@ -56,19 +56,19 @@ const Login = () => {
                   }))
                 }
               />
-              <p className="font-latobold text-black text-end text-[9px] font-normal mt-2 xl:text-lg"></p>
+              <p className="font-latobold text-primary-foreground text-end text-[9px] font-normal mt-2 xl:text-lg"></p>
             </div>
           </div>
           <div>
             <div className="flex justify-center items-center">
               <button
                 type="submit"
-                className="font-latoregular font-normal bg-yellow-400 px-16 py-2 rounded-lg text-black text-xs mb-2 hover:cursor-pointer hover:bg-yellow-500 xl:text-xl xl:px-36 xl:py-5 xl:rounded-2xl xl:mt-10 shadow-md shadow-gray-400 xl:mb-10 xl:font-medium"
+                className="font-latoregular font-normal bg-primary px-16 py-2 rounded-lg text-primary-foreground text-xs mb-2 hover:cursor-pointer hover:bg-yellow-600 xl:text-xl xl:px-36 xl:py-5 xl:rounded-2xl xl:mt-10 shadow-md shadow-gray-400 xl:mb-10 xl:font-medium"
               >
                 Login
               </button>
             </div>
-            <p className="font-latoregular text-black text-[8px] text-center xl:text-lg">
+            <p className="font-latoregular text-primary-foreground text-[8px] text-center xl:text-lg">
               Belum punya akun?
               <span className="font-bold hover:text-blue-700 ml-1">
                 <Link href="/signup">Daftar di sini</Link>

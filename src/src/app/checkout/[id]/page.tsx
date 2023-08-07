@@ -47,11 +47,14 @@ const Checkout = ({ params }: { params: { id: string } }) => {
   if (!isEmpty(lomba)) {
     return (
       <div>
-        <h1 className="mb-8">Checkout</h1>
-        <div className="flex flex-col xl:flex-row justify-between gap-12">
+        <h1 className="mb-8 font-poppinsbold">Checkout</h1>
+        <div className="flex flex-col xl:flex-row justify-between gap-12 font-latoregular">
           <main className="flex flex-col items-center lg:items-start text-center lg:flex-row lg:justify-between bg-foreground text-primary-foreground p-8 gap-16 rounded-xl">
             <Image alt={lomba.name} src={lomba.poster} width={200} height={0} />
-            <h2 className="max-w-sm">{lomba.name}</h2>
+            <div className="lg:text-start">
+              <h2 className="max-w-sm font-poppinsbold">{lomba.name}</h2>
+              <h3>{lomba.category}</h3>
+            </div>
             <h3 className="lg:self-end">
               {new Intl.NumberFormat("id-ID", {
                 style: "currency",
@@ -60,7 +63,7 @@ const Checkout = ({ params }: { params: { id: string } }) => {
             </h3>
           </main>
           <section className="flex flex-col bg-foreground text-primary-foreground p-8 gap-8 rounded-xl">
-            <h2>Summary</h2>
+            <h2 className="font-poppinsbold">Summary</h2>
             <div className="flex flex-col gap-4">
               <div className="flex justify-between gap-12 sm:gap-48">
                 <p>Biaya Perlombaan</p>
@@ -93,7 +96,7 @@ const Checkout = ({ params }: { params: { id: string } }) => {
             </div>
             <button
               onClick={handleCheckout}
-              className="bg-primary hover:bg-yellow-600 self-center px-8 py-3 rounded-xl mt-4"
+              className="bg-primary hover:bg-yellow-600 self-center px-8 py-3 rounded-xl mt-4 font-bold"
             >
               Checkout
             </button>

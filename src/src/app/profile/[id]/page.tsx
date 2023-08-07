@@ -86,7 +86,7 @@ function Profile() {
             <p className="text-center text-black font-latoregular mt-7 mb-3">
               Perlombaan yang diminati
             </p>
-            <div className="flex flex-wrap gap-y-4 items-center text-black gap-x-2">
+            <div className="font-latoregular flex flex-wrap gap-y-4 items-center text-black gap-x-2">
               <div className="flex flex-col flex-1 bg-primary h-[140px] rounded-lg items-center justify-center space-y-4 px-1 min-w-[150px]">
                 <Image
                   alt={dataProfile.lomba1}
@@ -121,9 +121,9 @@ function Profile() {
           </div>
         </section>
         <section className="w-full flex flex-col">
-          <div>
+          <div className="font-latoregular">
             <Tabs defaultValue="account" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
+              <TabsList className="grid w-full grid-cols-2 font-poppinsbold">
                 <TabsTrigger value="account">
                   Lomba Yang Diikuti ({competeData.length})
                 </TabsTrigger>

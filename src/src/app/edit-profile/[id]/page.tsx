@@ -64,8 +64,8 @@ const Editprofile = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
-          <p>Foto Profil</p>
+        <div className="flex flex-col justify-center items-center font-latoregular">
+          <h3>Foto Profil</h3>
           <CgProfile size={150} className="text-primary-foreground mb-8" />
         </div>
         <form onSubmit={handleSubmit} method="patch">
@@ -199,7 +199,7 @@ const Editprofile = () => {
           <div className="flex flex-col mt-20 mb-10">
             <button
               type="submit"
-              className="bg-primary hover:bg-yellow-600 focus:outline-none focus:ring rounded-lg mx-auto px-20 py-4 font-poppinsbold  "
+              className="bg-primary hover:bg-yellow-600 focus:outline-none focus:ring rounded-lg mx-auto px-20 py-4 font-latobold font-bold"
             >
               Simpan
             </button>

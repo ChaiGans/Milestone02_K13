@@ -17,6 +17,7 @@ interface Lomba {
   contact: string
   poster: string
   userId: string
+  category: string
 }
 
 function Competition({ params }: { params: { slug: string } }) {
@@ -41,13 +42,14 @@ function Competition({ params }: { params: { slug: string } }) {
 
   if (!isEmpty(lomba)) {
     return (
-      <div>
-        <h1 className="mb-8">{lomba.name}</h1>
+      <div className="font-latoregular">
+        <h3>{lomba.category}</h3>
+        <h1 className="mb-8 font-poppinsbold">{lomba.name}</h1>
         <div className="flex flex-col xl:flex-row justify-between gap-12 mb-36 xl:mb-16">
           <main className="self-center">
             <Image alt={lomba.name} src={lomba.poster} width={400} height={0} />
           </main>
-          <section className="flex flex-col self-center gap-4 max-w-3xl">
+          <section className="flex flex-col self-center xl:self-start gap-4 max-w-3xl">
             <p>{lomba.description}</p>
             <p>Deadline Pendaftaran: {lomba.registrationDate}</p>
             <p>
@@ -60,7 +62,7 @@ function Competition({ params }: { params: { slug: string } }) {
             <p>Contact Person: {lomba.contact}</p>
             <Link
               href={`/checkout/${lomba.id}`}
-              className="bg-primary hover:bg-yellow-600 text-primary-foreground px-12 py-3 self-center xl:self-baseline rounded-lg"
+              className="font-bold bg-primary hover:bg-yellow-600 text-primary-foreground px-12 py-3 self-center xl:self-baseline rounded-lg"
             >
               Daftar
             </Link>
@@ -71,10 +73,10 @@ function Competition({ params }: { params: { slug: string } }) {
             <CgProfile size={128} />
           </main>
           <section className="flex flex-col self-center gap-4">
-            <h3>{organizer}</h3>
+            <h3 className="font-poppinsbold">{organizer}</h3>
             <a
               href={`https://wa.me/${lomba.contact}`}
-              className="bg-primary hover:bg-yellow-600 text-primary-foreground px-8 py-2 self-baseline rounded-lg"
+              className="font-bold bg-primary hover:bg-yellow-600 text-primary-foreground px-8 py-2 self-baseline rounded-lg"
               target="_blank"
               rel="noopener noreferrer"
             >

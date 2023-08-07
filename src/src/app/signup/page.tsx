@@ -36,7 +36,7 @@ const Signup = () => {
     <form method="post" onSubmit={handleSubmit}>
       <div className="container mx-auto p-4 max-w-lg rounded-lg bg-white min-h-fit text-black">
         <div className="container mx auto p-0 my-5 text-center">
-          <h1 className="text-center font-poppinsbold text-4xl sm:text-5xl xl:text-[50px]  ">
+          <h1 className="text-center font-poppinsmedium text-4xl sm:text-5xl xl:text-[50px]  ">
             Sign Up
           </h1>
         </div>
@@ -83,15 +83,15 @@ const Signup = () => {
 
           <button
             type="submit"
-            className="bg-amber-300 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-lg mx-auto px-20 py-4 font-poppinsbold  "
+            className="bg-primary hover:bg-yellow-600 focus:outline-none focus:ring rounded-lg mx-auto px-20 py-4 font-latoregular font-bold"
           >
             Sign Up
           </button>
 
-          <div className="text-center mb-10">
+          <div className="text-center mb-10 font-latoregular">
             <p>
               Sudah punya akun?{" "}
-              <Link href="/login" className="hover:bg-sky-500">
+              <Link href="/login" className="hover:text-blue-700">
                 Masuk di sini
               </Link>
             </p>

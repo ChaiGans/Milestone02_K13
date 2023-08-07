@@ -51,8 +51,8 @@ function Upload() {
   }
 
   return (
-    <div className="bg-foreground mx-auto max-w-xl p-8 text-primary-foreground rounded-xl">
-      <h1 className="text-center mb-8">Upload Perlombaan</h1>
+    <div className="font-latoregular bg-foreground mx-auto max-w-xl p-8 text-primary-foreground rounded-xl">
+      <h1 className="font-poppinsmedium text-center mb-8">Upload Perlombaan</h1>
       <form
         action="/api/competitions"
         method="post"
@@ -182,7 +182,7 @@ function Upload() {
         </div>
         <button
           type="submit"
-          className="bg-primary px-10 py-3 self-center rounded-xl mt-8"
+          className="bg-primary hover:bg-yellow-600 font-bold px-10 py-3 self-center rounded-xl mt-8"
         >
           Upload
         </button>

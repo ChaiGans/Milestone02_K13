@@ -21,7 +21,7 @@ function SigninButton() {
               href="/upload"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-yellow-600 hover:cursor-pointer"
             >
-              Upload
+              Upload Here!
             </Link>
           </li>
           <li>

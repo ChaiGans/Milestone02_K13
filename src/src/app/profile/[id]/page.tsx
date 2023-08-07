@@ -54,7 +54,7 @@ function Profile() {
       .then((data) => setLombaData(data))
   }, [session?.user])
 
-  console.log(competeData)
+  // console.log(competeData)
 
   useEffect(() => {
     fetch(`/api/user/${session?.user.id}`)

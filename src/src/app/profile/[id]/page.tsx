@@ -14,6 +14,7 @@ interface dataLomba {
   name: string
   category: string
   poster: string
+  lombaId: string
 }
 
 interface profileData {
@@ -52,6 +53,8 @@ function Profile() {
       .then((response) => response.json())
       .then((data) => setLombaData(data))
   }, [session?.user])
+
+  console.log(competeData)
 
   useEffect(() => {
     fetch(`/api/user/${session?.user.id}`)
@@ -136,7 +139,7 @@ function Profile() {
                   {competeData.map((item, index) => (
                     <div key={index} className="w-full">
                       <CardLombaProfile
-                        id={item.id}
+                        id={item.lombaId}
                         image={item.poster}
                         coordinator={item.name}
                         category={item.category}

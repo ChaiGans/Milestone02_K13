@@ -5,6 +5,7 @@ interface RequestBody {
   category: string
   poster: string
   userId: string
+  lombaId: string
 }
 
 export async function POST(request: Request) {
@@ -17,6 +18,7 @@ export async function POST(request: Request) {
       category: body.category,
       poster: body.poster,
       userId: body.userId,
+      lombaId: body.lombaId,
     },
   })
 

@@ -39,6 +39,7 @@ const Checkout = ({ params }: { params: { id: string } }) => {
         category: lomba?.category,
         poster: lomba?.poster,
         userId: session?.user.id,
+        lombaId: params.id,
       }),
     })
     router.push("/")

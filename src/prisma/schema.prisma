@@ -24,7 +24,7 @@ model User {
 }
 
 model Lomba {
-  id               String @id @default(uuid())
+  id               String    @id @default(uuid())
   name             String
   category         String
   description      String
@@ -32,8 +32,9 @@ model Lomba {
   price            Int
   contact          String
   poster           String
-  organizer        User   @relation(fields: [userId], references: [id])
+  organizer        User      @relation(fields: [userId], references: [id])
   userId           String
+  Compete          Compete[]
 }
 
 model Compete {
@@ -43,4 +44,6 @@ model Compete {
   poster   String
   User     User?   @relation(fields: [userId], references: [id])
   userId   String?
+  lomba    Lomba   @relation(fields: [lombaId], references: [id])
+  lombaId  String
 }

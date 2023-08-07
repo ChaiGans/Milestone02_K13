@@ -23,7 +23,7 @@ Pengguna dapat melakukan sign in / log in pada bagian kanan atas untuk masuk ke 
 #### Tampilan Daftar Perlombaan
  ![Daftar](src/screenshot/3.png)
 
- Setelah log in / sign up pengguna dapat melihat daftar pelombaan yang ada. Jika ingin mendaftar salah satu perlombaan, pengguna dapat menekan tombol Dafar pada lomba yang dipilih.
+ Setelah log in / sign up pengguna dapat melihat daftar pelombaan yang ada. Jika ingin mendaftar salah satu perlombaan, pengguna dapat menekan tombol Daftar pada lomba yang dipilih.
 
  ![Daftar](src/screenshot/4.png)
 

@@ -54,6 +54,6 @@ Pengguna dapat meng-upload lomba juga dengan menekan tombol Upload Now di kanan 
 - Attara Majesta Ayub		19622265 : Membuat Laporan
 - Muhammad Daffa K		19622288 : Membuat Laporan
 
-## Penjelasan Website
+## Link Proposal Milestone
 
- Melalui proses Design Thinking yang kami lakukan yakni emphatize, define, ideate, dan prototyping. Kami memiliki solusi untuk membuat sebuah Website yang Menyediakan Informasi Lomba Secara Terpusat. Konsep ini dipilih karena paling memenuhi kriteria-kriteria yang kami buat, salah satunya adalah efektivitas. Konsep ini memiliki efektivitas yang paling tinggi dibandingkan kedua konsep lainnya. Selain itu, dengan menggunakan website akan lebih mudah diakses menggunakan berbagai perangkat tanpa perlu meng-install aplikasi terlebih dahulu.
+https://docs.google.com/document/d/1alSPPXSjzXI6rT-LF2wRYfV3PXjRETH3rIr31YABOd4/edit?usp=sharing
